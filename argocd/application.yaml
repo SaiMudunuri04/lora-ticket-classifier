@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: lora-ticket-classifier
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/SaiMudunuri04/lora-ticket-classifier.git
+    targetRevision: main
+    path: helm/chart
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: lora-ticket-classifier
+  syncPolicy:
+    automated: {prune: true, selfHeal: true}
+    syncOptions: [CreateNamespace=true]
