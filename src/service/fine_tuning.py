@@ -17,8 +17,10 @@ def load_examples(path: Path) -> list[dict]:
             continue
         try:
             record = json.loads(line)
-            text = str(record["text"]).strip()
-            label = int(record["label"])
+            if not isinstance(record["text"], str) or type(record["label"]) is not int:
+                raise ValueError("Expected string text and integer label")
+            text = record["text"].strip()
+            label = record["label"]
         except (ValueError, KeyError, TypeError) as exc:
             raise ValueError(f"Invalid record at line {number}") from exc
         if not text or label not in (0, 1):
