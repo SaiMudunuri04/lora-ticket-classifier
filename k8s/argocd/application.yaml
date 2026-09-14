@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/SaiMudunuri04/lora-ticket-classifier.git
     targetRevision: main
-    path: helm/chart
+    path: k8s/helm/lora-ticket-classifier
   destination:
     server: https://kubernetes.default.svc
     namespace: lora-ticket-classifier

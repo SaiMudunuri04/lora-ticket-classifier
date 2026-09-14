@@ -66,7 +66,11 @@ def train(training_path: Path, validation_path: Path, output: Path, *,
     import torch
     from peft import LoraConfig, TaskType, get_peft_model
     from torch.utils.data import DataLoader
-    from transformers import AutoModelForSequenceClassification, AutoTokenizer, DataCollatorWithPadding
+    from transformers import (
+        AutoModelForSequenceClassification,
+        AutoTokenizer,
+        DataCollatorWithPadding,
+    )
 
     random.seed(seed)
     torch.manual_seed(seed)

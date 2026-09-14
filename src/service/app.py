@@ -7,7 +7,10 @@ from pathlib import Path
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
+from .observability import RequestLoggingMiddleware
+
 app = FastAPI(title="LoRA ticket classifier", version="0.1.0")
+app.add_middleware(RequestLoggingMiddleware)
 
 
 class Ticket(BaseModel):
