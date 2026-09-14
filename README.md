@@ -7,6 +7,10 @@ a container, Helm release, Argo CD application, and a CI workflow that builds an
 immutable GHCR image after tests pass. It is a reference implementation; it has not
 been deployed to a user's AWS account or Kubernetes cluster.
 
+## Start here
+
+**Problem:** adapt a text classifier with fewer trainable parameters and clear evaluation boundaries. **What this demonstrates:** LoRA/PEFT training, duplicate protection, held-out evaluation, adapter export, and a bounded inference endpoint. **Inspect first:** [`docs/architecture.md`](docs/architecture.md), [`src/service/app.py`](src/service/app.py), and the adapter tests.
+
 ## Run
 
 ```sh
