@@ -1,7 +1,7 @@
 replicaCount: 2
 image:
   repository: ghcr.io/saimudunuri04/lora-ticket-classifier
-  tag: "ca065f2c01d198cbdb7064888041518f742ddc54"
+  tag: "c34a756dcb9b418b08b48919d137994835dd1088"
   pullPolicy: IfNotPresent
 imagePullSecrets: []
 service:
