@@ -6,7 +6,7 @@ podLabels: {}
 podAnnotations: {}
 image:
   repository: ghcr.io/saimudunuri04/lora-ticket-classifier
-  tag: "596fb9eb5df4f49ede56f7ebd34524d4ed712b4c"
+  tag: "80ae5754ac651edd288bff250fce3734fae396ba"
   pullPolicy: IfNotPresent
 imagePullSecrets: []
 serviceAccount:
